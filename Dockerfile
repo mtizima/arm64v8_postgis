@@ -1,6 +1,6 @@
 FROM arm64v8/postgres:10-buster
 
-LABEL maintainer="PostGIS Project - https://postgis.net"
+LABEL maintainer="Dmitry Grebenshchikov <mtizima@gmail.com>"
 
 ENV PG_MAJOR=10
 ENV POSTGIS_MAJOR 2.5
