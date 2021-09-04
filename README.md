@@ -4,7 +4,7 @@ The image is based on https://hub.docker.com/r/arm64v8/postgres
 
 # Supported tags and respective `Dockerfile` links
 
--	[`10-2.5`](https://github.com/docker-library/postgres/blob/b4b726dbf1885e8e1543526ad9d250fdb2689cbb/14/buster/Dockerfile)
+-	[`10-2.5`](https://github.com/mtizima/arm64v8_postgis/blob/main/Dockerfile)
 
 # How to use this image
 
