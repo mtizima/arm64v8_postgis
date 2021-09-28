@@ -13,7 +13,11 @@ jobs:
   make-docker-images:
     runs-on: ubuntu-20.04
     env:
+      PG_MAJOR: 10
+      POSTGIS_MAJOR: 2.5
+      POSTGIS_VERSION: 2.5.5+dfsg-1.pgdg100+2
       VERSION: 10-2.5
+
     name: Build PostGIS image
     steps:
       - name: Check out the repo
