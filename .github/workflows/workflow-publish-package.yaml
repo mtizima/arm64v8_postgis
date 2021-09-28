@@ -11,13 +11,16 @@ defaults:
 
 jobs:
   make-docker-images:
-    runs-on: ubuntu-20.04
+    runs-on: m
     env:
       VERSION: 10-2.5
     name: Build PostGIS image
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v1
 
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
