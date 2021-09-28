@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-20.04
     env:
       VERSION: 10-2.5
-    name: Build PostGIS image ${{env.VERSION}}
+    name: Build PostGIS image
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
