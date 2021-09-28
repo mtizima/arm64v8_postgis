@@ -11,7 +11,7 @@ defaults:
 
 jobs:
   make-docker-images:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     env:
       PG_MAJOR: 10
       POSTGIS_MAJOR: 2.5
