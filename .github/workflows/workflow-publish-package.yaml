@@ -11,7 +11,7 @@ defaults:
 
 jobs:
   make-docker-images:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     env:
       PG_MAJOR: 10
       POSTGIS_MAJOR: 2.5
@@ -23,12 +23,16 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v2
 
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v1
 
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
         with:
+          platforms: linux/arm64
           context: .
           load: true
           tags: postgis:${{env.VERSION}}
