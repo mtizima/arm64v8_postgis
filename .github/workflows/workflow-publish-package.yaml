@@ -34,5 +34,5 @@ jobs:
         with:
           platforms: linux/arm64
           context: .
-          load: true
-          tags: postgis:${{env.VERSION}}
+          push: true
+          tags: mtizima/arm64v8_postgis/arm64v8_postgis:${{env.VERSION}}
