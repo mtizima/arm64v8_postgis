@@ -32,10 +32,7 @@ jobs:
       - name: Push to GitHub Packages
         uses: docker/build-push-action@v2
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: docker.pkg.github.com
           platforms: linux/arm64
           context: .
           push: true
-          tags: mtizima/arm64v8_postgis/arm64v8_postgis:${{env.VERSION}}
+          tags: mtizima/arm64v8_postgis:${{env.VERSION}}
